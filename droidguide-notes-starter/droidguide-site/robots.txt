@@ -1,0 +1,5 @@
+User-agent: *
+Allow: /
+
+# Replace YOUR-GITHUB-USERNAME and YOUR-REPOSITORY if you publish a sitemap.
+# Sitemap: https://YOUR-GITHUB-USERNAME.github.io/YOUR-REPOSITORY/sitemap.xml

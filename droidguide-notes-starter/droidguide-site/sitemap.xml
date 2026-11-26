@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Replace every example URL with the final live page URL before publishing. -->
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://YOUR-SITE-URL/</loc></url>
+  <url><loc>https://YOUR-SITE-URL/about.html</loc></url>
+  <url><loc>https://YOUR-SITE-URL/contact.html</loc></url>
+  <url><loc>https://YOUR-SITE-URL/privacy.html</loc></url>
+  <url><loc>https://YOUR-SITE-URL/affiliate-disclosure.html</loc></url>
+  <url><loc>https://YOUR-SITE-URL/articles/android-app-permissions.html</loc></url>
+  <url><loc>https://YOUR-SITE-URL/articles/android-battery-checks.html</loc></url>
+  <url><loc>https://YOUR-SITE-URL/articles/free-up-android-storage.html</loc></url>
+</urlset>
