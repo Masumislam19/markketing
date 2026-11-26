@@ -1,8 +1,89 @@
 ---
 import SiteLayout from '../layouts/SiteLayout.astro';
+
 const base = import.meta.env.BASE_URL;
+const email = 'tket5393@gmail.com';
 ---
-<SiteLayout title="Contact RewardPath Guide" description="Contact RewardPath Guide with editorial feedback, corrections, or general questions.">
-  <section class="page-hero"><div class="container"><span class="section-kicker">GET IN TOUCH</span><h1>We value your<br /><em>feedback.</em></h1><p>Questions, corrections, or suggestions for a future guide are welcome.</p><div class="breadcrumb"><a href={base}>Home</a><span>/</span><span>Contact</span></div></div></section>
-  <section class="prose-page section-space"><div class="container contact-container"><div class="contact-card"><span class="contact-card-icon">✉</span><span class="section-kicker">EDITORIAL & GENERAL ENQUIRIES</span><h2>Send us a note.</h2><p>For now, contact the site owner by email. Replace the placeholder address below with your real email before publishing.</p><a class="button button-primary" href="mailto:REPLACE-WITH-YOUR-EMAIL@example.com">Email RewardPath <span>↗</span></a><p class="small-note">Site owner: replace <strong>masumislam57888@gmail.com</strong> in this page with an address you control.</p></div><div class="contact-side"><h3>What can you contact us about?</h3><ul><li>Article corrections or factual feedback</li><li>Suggestions for new educational topics</li><li>Privacy-related questions</li><li>Website accessibility or technical issues</li></ul><p>We cannot verify, approve, or award prizes for promotions run by other companies. For a specific promotion, contact the sponsor named in its official rules.</p></div></div></section>
+
+<SiteLayout
+  title="Contact RewardPath Guide"
+  description="Contact RewardPath Guide with editorial feedback, corrections, or general questions."
+>
+  <section class="page-hero">
+    <div class="container">
+      <span class="section-kicker">GET IN TOUCH</span>
+
+      <h1>
+        We value your<br />
+        <em>feedback.</em>
+      </h1>
+
+      <p>
+        Questions, corrections, or suggestions for a future guide
+        are welcome.
+      </p>
+
+      <div class="breadcrumb">
+        <a href={base}>Home</a>
+        <span>/</span>
+        <span>Contact</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="prose-page section-space">
+    <div class="container contact-container">
+
+      <div class="contact-card">
+        <span class="contact-card-icon">✉</span>
+
+        <span class="section-kicker">
+          EDITORIAL & GENERAL ENQUIRIES
+        </span>
+
+        <h2>Send us a note.</h2>
+
+        <p>
+          For questions, feedback, corrections, or general enquiries,
+          please contact the RewardPath Guide editorial team by email.
+        </p>
+
+        <a
+          class="button button-primary"
+          href={`mailto:${email}`}
+        >
+          Email RewardPath <span>↗</span>
+        </a>
+
+        <p class="small-note">
+          Email:
+          <a href={`mailto:${email}`}>{email}</a>
+        </p>
+      </div>
+
+      <div class="contact-side">
+        <h3>What can you contact us about?</h3>
+
+        <ul>
+          <li>Article corrections or factual feedback</li>
+          <li>Suggestions for new educational topics</li>
+          <li>Privacy-related questions</li>
+          <li>Website accessibility or technical issues</li>
+          <li>Affiliate disclosure or advertising questions</li>
+        </ul>
+
+        <p>
+          RewardPath Guide does not operate or guarantee third-party
+          promotions. We cannot verify, approve, or award prizes
+          offered by other companies.
+        </p>
+
+        <p>
+          For questions about a specific promotion, please contact
+          the sponsor identified in its official rules.
+        </p>
+      </div>
+
+    </div>
+  </section>
 </SiteLayout>
