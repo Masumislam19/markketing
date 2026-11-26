@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://masumislam19.github.io/markketing/sitemap.xml

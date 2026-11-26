@@ -1,0 +1,72 @@
+---
+import '../styles/global.css';
+const {
+  title = 'RewardPath Guide | Understand Rewards Before You Join',
+  description = 'Independent educational guides to gift card promotions, rewards programs, sweepstakes, and online safety.',
+  active = ''
+} = Astro.props;
+const base = import.meta.env.BASE_URL;
+const pathname = Astro.url.pathname;
+const routePath = pathname.startsWith(base) ? pathname.slice(base.length) : pathname.replace(/^\/+/, '');
+const canonical = new URL(`${base}${routePath}`, Astro.site);
+const nav = [
+  { label: 'Home', href: base, key: 'home' },
+  { label: 'Gift card guides', href: `${base}guides/`, key: 'guides' },
+  { label: 'Scam & safety', href: `${base}guides/spot-fake-gift-card-giveaways/`, key: 'safety' },
+  { label: 'About', href: `${base}about/`, key: 'about' }
+];
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    <meta name="theme-color" content="#f7f8f3" />
+    <link rel="icon" type="image/svg+xml" href={`${base}favicon.svg`} />
+    <link rel="canonical" href={canonical} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <title>{title}</title>
+  </head>
+  <body>
+    <div class="announcement"><span class="announcement-dot"></span> Practical, independent guides. No guaranteed-prize claims.</div>
+    <header class="site-header">
+      <div class="container header-inner">
+        <a class="brand" href={base} aria-label="RewardPath Guide home">
+          <span class="brand-mark">R<span>↗</span></span>
+          <span class="brand-copy"><strong>RewardPath</strong><small>GUIDE</small></span>
+        </a>
+        <nav class="desktop-nav" aria-label="Main navigation">
+          {nav.map((item) => <a class:list={[{ active: active === item.key }]} href={item.href}>{item.label}</a>)}
+        </nav>
+        <a class="header-cta" href={`${base}guides/`}>Explore guides <span>↗</span></a>
+        <details class="mobile-menu">
+          <summary class="mobile-menu-button" aria-label="Open navigation">☰</summary>
+          <nav class="mobile-nav" aria-label="Mobile navigation">
+            {nav.map((item) => <a href={item.href}>{item.label}</a>)}
+            <a href={`${base}contact/`}>Contact</a>
+          </nav>
+        </details>
+      </div>
+    </header>
+    <main><slot /></main>
+    <footer class="site-footer">
+      <div class="container footer-top">
+        <div class="footer-brand-block">
+          <a class="brand brand-footer" href={base}>
+            <span class="brand-mark">R<span>↗</span></span>
+            <span class="brand-copy"><strong>RewardPath</strong><small>GUIDE</small></span>
+          </a>
+          <p>Clear information for smarter decisions about online rewards, gift card promotions, and sweepstakes.</p>
+        </div>
+        <div class="footer-links"><strong>Explore</strong><a href={`${base}guides/`}>All guides</a><a href={`${base}about/`}>About us</a><a href={`${base}contact/`}>Contact</a></div>
+        <div class="footer-links"><strong>Transparency</strong><a href={`${base}privacy/`}>Privacy policy</a><a href={`${base}affiliate-disclosure/`}>Affiliate disclosure</a><a href={`${base}terms/`}>Terms of use</a></div>
+      </div>
+      <div class="container footer-bottom"><span>© {new Date().getFullYear()} RewardPath Guide. All rights reserved.</span><span>Educational content only · Not affiliated with gift card brands.</span></div>
+    </footer>
+  </body>
+</html>

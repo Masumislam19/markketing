@@ -1,0 +1,7 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<SiteLayout title="Page Not Found | RewardPath Guide" description="The page you requested could not be found.">
+  <section class="not-found"><div class="container"><span class="section-kicker">ERROR 404</span><h1>This page took<br /><em>a different path.</em></h1><p>The page may have moved or the link may be incorrect.</p><a class="button button-primary" href={base}>Back to homepage <span>↗</span></a></div></section>
+</SiteLayout>

@@ -1,0 +1,8 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<SiteLayout title="Terms of Use | RewardPath Guide" description="Terms for using the RewardPath Guide educational website.">
+  <section class="page-hero compact"><div class="container"><span class="section-kicker">SITE INFORMATION</span><h1>Terms of <em>use.</em></h1><p>Guidelines for using this educational website.</p><div class="breadcrumb"><a href={base}>Home</a><span>/</span><span>Terms</span></div></div></section>
+  <section class="prose-page section-space"><div class="container prose-container"><h2>Educational purpose</h2><p>RewardPath Guide provides general educational information about gift card promotions, rewards programs, sweepstakes, and online safety. Content is not legal, tax, financial, or professional advice.</p><h2>No prize or reward guarantee</h2><p>We do not issue gift cards, operate third-party promotions, choose winners, or guarantee that a reader will receive a prize, reward, or payment.</p><h2>Verify third-party information</h2><p>Promotion details can change. Always review the current official rules and terms from the named sponsor. You are responsible for deciding whether to participate in a third-party promotion.</p><h2>External links</h2><p>Links to other websites are provided for convenience or reference. We do not control third-party content, services, or privacy practices.</p><h2>Changes</h2><p>We may update these terms and the website content. Continued use after an update means you accept the revised terms to the extent permitted by applicable law.</p><h2>Contact</h2><p>Questions about these terms can be sent through our <a href={`${base}contact/`}>Contact page</a>.</p></div></section>
+</SiteLayout>

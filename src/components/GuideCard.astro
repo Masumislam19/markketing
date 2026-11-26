@@ -1,0 +1,9 @@
+---
+const { guide, base } = Astro.props;
+---
+<a class="guide-card" href={`${base}guides/${guide.slug}/`}>
+  <div class="guide-card-top"><span class="category-tag">{guide.category}</span><span class="card-arrow">↗</span></div>
+  <h3>{guide.title}</h3>
+  <p>{guide.excerpt}</p>
+  <div class="guide-card-meta"><span>{guide.readTime}</span><span>Read guide <b>→</b></span></div>
+</a>

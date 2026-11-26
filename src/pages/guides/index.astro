@@ -1,0 +1,10 @@
+---
+import SiteLayout from '../../layouts/SiteLayout.astro';
+import GuideCard from '../../components/GuideCard.astro';
+import { guides } from '../../data/guides.js';
+const base = import.meta.env.BASE_URL;
+---
+<SiteLayout title="Gift Card & Rewards Guides | RewardPath Guide" description="Browse plain-English guides about gift card promotions, rewards programs, sweepstakes, privacy, and online safety." active="guides">
+  <section class="page-hero"><div class="container"><span class="section-kicker">THE READING ROOM</span><h1>Clear answers.<br /><em>Smarter choices.</em></h1><p>Practical explainers to help you understand promotions, read the details, and protect your information.</p><div class="breadcrumb"><a href={base}>Home</a><span>/</span><span>Guides</span></div></div></section>
+  <section class="listing-section section-space"><div class="container"><div class="listing-intro"><div><span class="section-kicker">ALL ARTICLES</span><h2>Explore the <em>guides.</em></h2></div><span class="article-count">{guides.length} EDITORIAL GUIDES</span></div><div class="guide-grid guide-grid-all">{guides.map((guide) => <GuideCard guide={guide} base={base} />)}</div></div></section>
+</SiteLayout>

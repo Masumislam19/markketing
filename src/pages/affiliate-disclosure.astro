@@ -1,0 +1,8 @@
+---
+import SiteLayout from '../layouts/SiteLayout.astro';
+const base = import.meta.env.BASE_URL;
+---
+<SiteLayout title="Affiliate Disclosure | RewardPath Guide" description="RewardPath Guide affiliate relationship disclosure and editorial policy.">
+  <section class="page-hero compact"><div class="container"><span class="section-kicker">TRANSPARENCY</span><h1>Affiliate <em>disclosure.</em></h1><p>How commercial relationships will be disclosed.</p><div class="breadcrumb"><a href={base}>Home</a><span>/</span><span>Affiliate disclosure</span></div></div></section>
+  <section class="prose-page section-space"><div class="container prose-container"><h2>Current status</h2><p>At the time this starter website was prepared, it does not contain affiliate links or paid placements. RewardPath Guide does not currently claim to represent any gift card issuer, retailer, rewards program, or sweepstakes sponsor.</p><h2>If affiliate links are added later</h2><p>Some links may generate a commission if a reader takes an action after clicking. If that happens, the relationship will be disclosed clearly near the relevant link or recommendation, before the reader clicks. A commission will not increase the reader's price unless the linked service says otherwise.</p><h2>Editorial independence</h2><p>We aim to distinguish educational information from advertising and sponsored content. We will not describe a chance-based sweepstakes as a guaranteed prize or imply that a brand sponsors a promotion without evidence.</p><h2>Questions</h2><p>For questions about a disclosure, contact us through the <a href={`${base}contact/`}>Contact page</a>.</p></div></section>
+</SiteLayout>
